@@ -1,0 +1,29 @@
+type Customer
+{
+	id:ID!
+	todo:String
+	completed:Boolean
+	userId:Int
+}
+
+
+type Query
+{
+	allCustomers:[Customer]
+	customerInfo(id:Int):Customer
+	newCutomer:Customer
+}
+
+
+type Mutation
+{
+	insertCustomer(c:CustomerInput):Customer
+}
+
+
+input CustomerInput
+{
+	todo:String
+	completed:Boolean
+	userId:Int
+}
